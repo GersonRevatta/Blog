@@ -1,0 +1,7 @@
+<div class="content">
+  <p><%= @post.title%></p>
+  <p class="date">
+    <%= time_ago_in_words(@post.created_at) %>
+  </p>
+  <p><%= @post.body %></p>
+</div>
