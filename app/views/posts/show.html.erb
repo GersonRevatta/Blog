@@ -5,4 +5,10 @@
 <br>
 <%= @post.body %>
 <br>
+<p>
+  <%= @post.comments.count %> coments
+</p>
+<%= render @post.comments %>
+<%= render 'comments/form' %>
+<br>
 <%= link_to 'Elements', root_path %>
