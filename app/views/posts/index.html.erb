@@ -1,5 +1,7 @@
 <h1>this is  root</h1>
-<%= link_to 'New Post', new_post_path %>
+<% if user_signed_in? %>
+  <%= link_to 'New Post', new_post_path %>
+<% end %>  
 <h2>Elements</h2>
 <% @posts.each do |post| %>
   <h2 class="title"><%= link_to post.title, post%></h2>

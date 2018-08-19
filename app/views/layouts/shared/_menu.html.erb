@@ -1,3 +1,22 @@
 <div class="content-nav">
   <h3>this is nav bar</h3>
 </div>
+<% if current_user %>
+  <li>
+    <%= link_to destroy_user_session_path , method: :delete do %>
+      <div class="icon"><i class="fas fa-user-times"></i><span>Cerrar Sesión</span></div>
+    <% end %>
+  </li>
+<% else %>
+  <li>
+    <%= link_to new_user_registration_path do %>
+      <div class="icon"><i class="fas fa-address-card"></i><span>Registrarse</span></div>
+    <% end %>
+  </li>
+  <li>
+    <%= link_to new_user_session_path do %>
+      <div class="icon"><i class="fas fa-user-circle"></i><span>Inicia Sesión</span></div>
+    <% end %>
+  </li>
+<% end %>
+<hr>
