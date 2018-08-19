@@ -1,0 +1,9 @@
+<h1>This is root xd</h1>
+<%= link_to 'New Post', new_post_path %>
+<h3>Posts xd</h3>
+<% @posts.each do |post| %>
+  <strong><%= link_to post.name, post %></strong><br>
+  <%= post.body %>
+  <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+  <br>
+<% end %>
