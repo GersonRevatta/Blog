@@ -1,9 +1,16 @@
-<h1>This is root xd</h1>
-<%= link_to 'New Post', new_post_path %>
-<h3>Posts xd</h3>
-<% @posts.each do |post| %>
-  <strong><%= link_to post.name, post %></strong><br>
-  <%= post.body %>
-  <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
-  <br>
-<% end %>
+<div class="container_news">
+  <div class="row">
+    <div class="col-md-9">
+      <% @posts.each do |post| %>
+        <strong><h2><%= link_to post.name, post %></h2></strong><br>
+        <div class="content_new"><%= post.body %></div>
+        <blockquote class="">
+          <footer class=""><%= post.created_at.strftime("%B %d, %Y") %></footer>
+        </blockquote>
+        <hr>
+        <br>
+      <% end %>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>

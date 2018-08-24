@@ -18,6 +18,22 @@
 .third-slide {
   background-image: url('https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519__340.jpg');
 }
+/* news */
+.icanux {
+  background: blue;
+  height: 6em;
+}
+.container_news {
+  padding: 1.5em 3em;
+}
+hr {
+  border-top: 1px solid red;
+}
+.content_new {
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
 /* footer */
 .blog-footer {
     text-align: center;
