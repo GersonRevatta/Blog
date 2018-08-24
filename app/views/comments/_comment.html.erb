@@ -1,7 +1,8 @@
-<strong><%= comment.name %></strong><br>
-<p>Submitted <%= time_ago_in_words(comment.created_at) %> Ago</p>
-<p> 
-  <%= link_to 'Delete', [comment.post, comment], method: :destroy, data: { confirm: 'Are you sure?'} %>
-</p>
-<%= comment.body %>
+<h4><strong><%= comment.name %></strong></h4>
+<div class="comment_description">
+  <%= comment.body %>
+</div>
+<blockquote>
+  <footer>Submitted <%= time_ago_in_words(comment.created_at) %> Ago |<%= link_to 'Delete', [comment.post, comment], method: :destroy, data: { confirm: 'Are you sure?'} %></footer>
+</blockquote>
 <hr>

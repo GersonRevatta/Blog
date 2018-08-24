@@ -1,16 +1,17 @@
-
-<h2><strong><%= @post.name %></strong></h2>
-<p>Submitted <%= time_ago_in_words(@post.created_at) %> Ago</p>
-|<%= link_to 'edit', edit_post_path(@post) %>
-|<%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?'} %>
-<br>
-<div class="content_description">
-  <%= @post.body %>
+<div class="containter_new">
+  <div class="row">
+    <div class="col-md-10">
+      <h2 class="title_post"><strong><%= @post.name %></strong></h2>
+      <p>Submitted <%= time_ago_in_words(@post.created_at) %> Ago
+      |<%= link_to 'edit', edit_post_path(@post) %>
+      |<%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?'} %>
+      </p>
+      <div class="content_description"><%= @post.body %></div>
+      <div class="container_comment">
+        <h3><%= @post.comments.count %> coments</h3>
+        <%= render @post.comments %>
+        <%= render 'comments/form' %>
+      </div>    
+    </div>
+  </div>
 </div>
-<p>
-  <%= @post.comments.count %> coments
-</p>
-<%= render @post.comments %>
-<%= render 'comments/form' %>
-<br>
-<%= link_to 'Elements', root_path %>

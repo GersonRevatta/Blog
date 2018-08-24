@@ -34,6 +34,16 @@ hr {
   white-space:nowrap;
   text-overflow:ellipsis;
 }
+/* new */
+.containter_new {
+  padding: 2em 6em;
+}
+.content_description, .container_comment {
+  padding: 1em 4em;
+}
+.title_post {
+  text-align: center;
+}
 /* footer */
 .blog-footer {
     text-align: center;
