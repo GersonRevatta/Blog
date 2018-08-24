@@ -1,0 +1,11 @@
+<footer class="blog-footer">
+  <p>Single user blog.</p>
+  <% if !current_user %>
+    <p>
+      <%= link_to 'Sign in', new_user_registration_path %>
+    </p>
+    <p>
+      <%= link_to 'Log in', new_user_session_path %>
+    </p>
+  <% end %>
+</footer>

@@ -6,7 +6,6 @@ ruby '2.3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -29,7 +28,10 @@ gem 'jbuilder', '~> 2.5'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+gem 'bootstrap-sass', '~> 3.3.7'
+gem 'jquery-rails'
+gem 'devise'
+gem 'pg', '~> 0.18'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
