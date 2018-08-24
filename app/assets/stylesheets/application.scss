@@ -44,6 +44,13 @@ hr {
 .title_post {
   text-align: center;
 }
+/* form devise */
+.container_sign_up, .container_log_in {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
 /* form post */
 .content_form {
   padding: 3em;
